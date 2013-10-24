@@ -29,6 +29,7 @@ app.WeatherView = Backbone.View.extend({
 
     showWeather: function () {
 		console.log('showWeather called');
+		$('#weatherContainer').html('<img src = \'loading.gif\' />');
 		//set a variable to 'this' in order to refer to the view in the jquery complete() method
 		//I used the complete method to ensure that the asynchronous fetch call had fully completed before rendering
 		var self = this;
