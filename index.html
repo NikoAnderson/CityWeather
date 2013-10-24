@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>City Weather App</title>
+        <link rel="stylesheet" href="weatherStyle.css">
+    </head>
+    <body>
+		<script id="weatherTemplate" type="text/template">
+		
+		<div class = 'weatherDisplay'>
+			<div class = "city">The weather for <b><%= city %> </b></div>
+			Country: <b><%= country %></b><br/><br/>
+			<div class = "main"><img src = "http://openweathermap.org/img/w/<%= icon %>.png" /><br/><%= main %> - <%= details %></div>
+			<br/>
+			<div class = "temp">The temperature is &nbsp; <b><%= temp %>&deg; F</b></div>
+		</div>
+		
+		</script>
+        
+	
+		<div id = "citySelection">
+		
+			<h2>The City Weather App</h2>
+			Select your city:
+			
+				<select id = 'selectedID'>
+					<option value = "4116315">Jacksonville</option>
+					<option value = "4221552">Savannah</option>
+					<option value = "4488762">Rocky Mount</option>
+					<option value = "4781708">Richmond</option>
+					<option value = "4347778">Baltimore</option>
+					<option value = "4145381">Wilmington</option>
+					<option value = "4560349">Philadelphia</option>
+					<option value = "5012521">Trenton</option>
+					<option value = "5128581">New York City</option>
+					<option value = "5224151">Providence</option>
+					<option value = "4930956">Boston</option>
+					<option value = "5091383">Portsmouth</option>
+					<option value = "4975802">Portland</option>
+					<option value = "5957776">Fredericton</option>
+					<option value = "3143244">Oslo</option>
+					<option value = "360630">Cairo</option>
+					<option value = "1816670">Beijing</option>
+					<option value = "3451190">Rio de Janeiro</option>
+					<option value = "2147714">Sydney</option>
+				</select>
+				
+				<button id="search_button">Get city weather</button>
+
+		</div>
+		<div id = "weatherContainer" class = "weatherContainer">
+		
+		</div>
+
+		<script src="js/lib/jquery.min.js"></script>
+		<script src="js/lib/underscore-min.js"></script>
+		<script src="js/lib/backbone.js"></script>
+		<script src="js/models/cityWeather.js"></script>
+		<script src="js/routers/Router.js"></script>
+		<script src="js/views/WeatherView.js"></script>
+		<script src="js/app.js"></script>
+		
+    </body>
+</html>
